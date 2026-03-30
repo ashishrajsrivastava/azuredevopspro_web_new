@@ -24,7 +24,7 @@ jobs:
           node-version: '18'
 
       - name: Install Node dependencies
-        run: npm install axios
+        run: npm ci
 
       - name: Fetch YouTube data
         env:
@@ -36,6 +36,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
+          bundler: 4.0.9
           bundler-cache: true
 
       - name: Build Jekyll site
