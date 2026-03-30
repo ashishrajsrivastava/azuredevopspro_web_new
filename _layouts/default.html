@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="site-title" href="/">{{ site.title }}</a>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="social-icons">
+          <a href="https://youtube.com/ashishrajsrivastava" class="social-icon" title="YouTube" target="_blank">▶️</a>
+          <a href="https://github.com/ashishrajsrivastava" class="social-icon" title="GitHub" target="_blank">⚙️</a>
+          <a href="https://linkedin.com/in/ashishrajsrivastava" class="social-icon" title="LinkedIn" target="_blank">in</a>
+          <a href="https://twitter.com/ashishrajsriv" class="social-icon" title="Twitter" target="_blank">𝕏</a>
+        </div>
+        <p>© {{ "now" | date: "%Y" }} {{ site.title }} | DevOps is culture, tools are outcome</p>
+        <p><a href="mailto:contact@azuredevopspro.com">contact@azuredevopspro.com</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/youtube-api.js"></script>
+  </body>
+</html>

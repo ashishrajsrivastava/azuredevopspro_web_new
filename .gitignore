@@ -1,0 +1,16 @@
+# Jekyll
+_site/
+.sass-cache/
+.bundle/
+.DS_Store
+
+# Node
+node_modules/
+package-lock.json
+
+# Generated data
+_data/youtube.json
+
+# Environment
+.env
+.env.local

@@ -1,0 +1,10 @@
+title: Azure DevOps Pro
+email: contact@azuredevopspro.com
+description: "DevOps is culture, tools are outcome!"
+baseurl: "" # the subpath of your site, e.g. /repo-name
+url: "https://<your-github-username>.github.io" # your site URL
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
