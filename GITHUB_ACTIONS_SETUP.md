@@ -36,8 +36,8 @@ Previously, the YouTube API key was stored directly in your JavaScript file (`as
 
 **Example:**
 ```
-YOUTUBE_API_KEY = AIzaSyB0DSZHYWMdIXXVUE3rvPJqGhcwwjsznVw
-YOUTUBE_CHANNEL_ID = UC6jSaKXd6gw-xdEwtGk-NcA
+YOUTUBE_API_KEY = AIz......w
+YOUTUBE_CHANNEL_ID = UC6jSaKXd......-NcA
 ```
 
 ### Step 3: Push to GitHub
@@ -52,10 +52,39 @@ The GitHub Actions workflow in `.github/workflows/build.yml` is already configur
 
 ## 🧪 Testing Locally
 
-### Test the script locally:
+### Option 1: Using .env file (Recommended)
+
+1. **Copy the template:**
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Edit `.env` file:**
+   ```bash
+   # Open .env and add your actual values
+   YOUTUBE_API_KEY=your_actual_api_key_here
+   YOUTUBE_CHANNEL_ID=your_actual_channel_id_here
+   ```
+
+3. **Install dependencies and run:**
+   ```bash
+   npm install
+   npm run fetch-youtube
+   bundle exec jekyll serve
+   ```
+
+   **Or use individual commands:**
+   ```bash
+   npm install                    # Install Node dependencies
+   npm run fetch-youtube         # Fetch YouTube data
+   npm run serve                 # Start Jekyll server
+   npm run build                 # Build Jekyll site
+   ```
+
+### Option 2: Using environment variables
 
 ```bash
-# Set environment variables
+# Set environment variables directly
 export YOUTUBE_API_KEY="your-api-key-here"
 export YOUTUBE_CHANNEL_ID="your-channel-id-here"
 
@@ -80,6 +109,8 @@ scripts/fetch-youtube-data.js        # Node.js script to fetch YouTube data
 _data/youtube.json                   # Generated data (gitignored)
 assets/js/youtube-api.js             # Frontend JS (loads static data)
 index.md                             # Injects YOUTUBE_DATA into window
+.env.example                         # Template for local environment variables
+package.json                         # Node.js dependencies and scripts
 ```
 
 ## 🔄 How it Works: Workflow Flow

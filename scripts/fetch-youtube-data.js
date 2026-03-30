@@ -9,6 +9,9 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
+// Load environment variables from .env file (for local development)
+require('dotenv').config();
+
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 const VIDEOS_TO_SHOW = 9;
