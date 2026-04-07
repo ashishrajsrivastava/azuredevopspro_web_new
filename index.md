@@ -1,64 +1,249 @@
 ---
 layout: default
 title: Home
+description: "Ashish Raj Srivastava — Cloud & DevOps Architect, Microsoft Certified Expert, Author, and Community Builder"
 ---
 
-<!-- Inject YouTube data into window for JavaScript -->
 <script>
   window.YOUTUBE_DATA = {{ site.data.youtube | jsonify }};
 </script>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1>Azure DevOps Pro</h1>
-  <p>DevOps is culture, tools are outcome 🚀</p>
-  <p>Learn Azure DevOps, GitOps, CI/CD, Infrastructure as Code, and build unstoppable cloud-native solutions</p>
-</section>
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="hero-prompt">intro --about-me</p>
 
-<!-- Telegram Community Section -->
-<section class="telegram-intro">
-  <h2>Join Our Telegram Community 💬</h2>
-  <p>Connect with thousands of DevOps professionals, share knowledge, ask questions, and grow together</p>
-  <p>Our vibrant community is where DevOps culture happens in real-time</p>
-  <a href="https://t.me/azuredevopspro" class="button button-secondary" target="_blank">🔗 Join t.me/azuredevopspro</a>
-</section>
+        <h1 class="hero-name">
+          Hi, I'm <span class="highlight">Ashish Raj</span>
+        </h1>
+        <p class="hero-title">// Cloud &amp; DevOps Architect · Author · Community Builder</p>
 
-<!-- Books Section -->
-<section>
-  <h2>📚 My Published Books</h2>
-  <p>Comprehensive guides on Azure DevOps and cloud-native DevOps practices</p>
-  <div class="grid" id="books-gallery">
-    <!-- Books will be populated by JavaScript -->
+        <p class="hero-bio">
+          Technologist and storyteller helping engineering teams improve their velocity.
+          Microsoft Certified DevOps Expert &amp; Trainer. I write, teach, and build communities
+          around Azure DevOps, GitOps, IaC, and cloud-native engineering.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge badge-blue">Azure DevOps</span>
+          <span class="badge badge-blue">Kubernetes</span>
+          <span class="badge badge-green">Terraform &amp; Bicep</span>
+          <span class="badge badge-green">GitOps</span>
+          <span class="badge badge-orange">CI/CD</span>
+          <span class="badge badge-orange">Platform Engineering</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://t.me/azuredevopspro" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-telegram"></i> Join Community
+          </a>
+          <a href="http://resume.azuredevopspro.com/" class="btn btn-outline" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-lines"></i> View Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Terminal Card -->
+      <div class="terminal-card">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <span class="terminal-title">ashish@devops ~ bash</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="term-prompt">❯</span>
+            <span class="term-cmd">whoami</span>
+          </div>
+          <div class="terminal-line">
+            <span class="term-out info">ashish-raj-srivastava</span>
+          </div>
+          <div class="terminal-line" style="margin-top:0.4rem">
+            <span class="term-prompt">❯</span>
+            <span class="term-cmd">cat skills.txt</span>
+          </div>
+          <div class="terminal-line"><span class="term-out">→ Azure DevOps &amp; GitHub Actions</span></div>
+          <div class="terminal-line"><span class="term-out">→ Terraform, Bicep, ARM</span></div>
+          <div class="terminal-line"><span class="term-out">→ Kubernetes &amp; GitOps</span></div>
+          <div class="terminal-line"><span class="term-out">→ Platform Engineering</span></div>
+          <div class="terminal-line" style="margin-top:0.4rem">
+            <span class="term-prompt">❯</span>
+            <span class="term-cmd">certifications --list</span>
+          </div>
+          <div class="terminal-line"><span class="term-out success">✔ MS DevOps Expert</span></div>
+          <div class="terminal-line"><span class="term-out success">✔ Microsoft Certified Trainer</span></div>
+          <div class="terminal-line" style="margin-top:0.4rem">
+            <span class="term-prompt">❯</span>
+            <span class="term-out"><span class="term-cursor"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- YouTube Channel Section -->
-<section>
-  <div id="youtube-header" class="youtube-header loading">
-    <!-- Channel info will be populated by YouTube API -->
-  </div>
+<!-- =========================================================
+     TELEGRAM COMMUNITY
+     ========================================================= -->
+<section class="telegram-section">
+  <div class="container">
+    <p class="section-label">Community</p>
+    <p class="section-title">Join Our Telegram Group</p>
 
-  <h2>Latest YouTube Videos</h2>
-  <div class="grid" id="video-gallery">
-    <!-- Videos will be populated by YouTube API -->
+    <div class="telegram-card">
+      <!-- Info side -->
+      <div class="telegram-info">
+        <div class="tg-icon-wrap">
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+        <div>
+          <h2>AzureDevOpsPro</h2>
+          <p style="margin-top:0.5rem;">
+            A global community of DevOps professionals sharing
+            knowledge, solutions, and career growth tips — in real time.
+          </p>
+        </div>
+        <div class="tg-stats">
+          <div class="tg-stat-item">
+            <span class="tg-stat-num">7k+</span>
+            <span class="tg-stat-label">Members</span>
+          </div>
+          <div class="tg-stat-item">
+            <span class="tg-stat-num">Daily</span>
+            <span class="tg-stat-label">Active Discussions</span>
+          </div>
+        </div>
+        <a href="https://t.me/azuredevopspro" class="btn btn-primary" target="_blank" rel="noopener" style="align-self:flex-start;">
+          <i class="fa-brands fa-telegram"></i> Join t.me/azuredevopspro
+        </a>
+      </div>
+
+      <!-- Chat simulation -->
+      <div class="telegram-chat">
+        <div class="chat-header">
+          <div class="chat-avatar"><i class="fa-brands fa-telegram"></i></div>
+          <div class="chat-header-info">
+            <div class="chat-header-name">AzureDevOpsPro</div>
+            <div class="chat-header-sub">7,426 members online</div>
+          </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-bubble theirs" style="animation-delay:0.1s">
+            <span class="bubble-sender">Priya K.</span>
+            <div class="bubble-text">Just deployed to AKS using Azure DevOps pipeline 🚀 took 4 mins end to end!</div>
+            <span class="bubble-time">17:02</span>
+          </div>
+          <div class="chat-bubble theirs" style="animation-delay:0.3s">
+            <span class="bubble-sender">Rahul M.</span>
+            <div class="bubble-text">Nice! Are you using Helm or Kustomize for manifests?</div>
+            <span class="bubble-time">17:03</span>
+          </div>
+          <div class="chat-bubble mine" style="animation-delay:0.5s">
+            <div class="bubble-text">Helm with value overrides per env. Works great with Azure DevOps variable groups 💡</div>
+            <span class="bubble-time">17:04</span>
+          </div>
+          <div class="chat-bubble theirs" style="animation-delay:0.7s">
+            <span class="bubble-sender">Ashish Raj</span>
+            <div class="bubble-text">Check out the Bicep module approach I shared last week — cleaner IaC for AKS too 📚</div>
+            <span class="bubble-time">17:05</span>
+          </div>
+          <div class="chat-bubble theirs" style="animation-delay:0.9s">
+            <span class="bubble-sender">Jonas W.</span>
+            <div class="bubble-text">This community is gold 🙌 learning something new every day</div>
+            <span class="bubble-time">17:06</span>
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <div class="chat-input-mock">Join to participate...</div>
+          <div class="chat-send-btn"><i class="fa-solid fa-paper-plane"></i></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Training & Community Section -->
-<section class="features">
-  <h2>Free Training Sessions</h2>
-  <ul>
-    <li><strong>Azure DevOps Pipelines</strong> - Build robust CI/CD for Azure, Kubernetes, and hybrid apps</li>
-    <li><strong>Infrastructure as Code</strong> - ARM, Bicep, Terraform best practices and patterns</li>
-    <li><strong>Site Reliability & Observability</strong> - Monitoring, alerts, and cost optimization</li>
-    <li><strong>GitOps & Cloud-Native</strong> - Modern deployment strategies and best practices</li>
-  </ul>
+<!-- =========================================================
+     YOUTUBE VIDEOS
+     ========================================================= -->
+<section class="yt-section">
+  <div class="container">
+    <div class="yt-section-header">
+      <div>
+        <p class="section-label">YouTube</p>
+        <p class="section-title">Latest Videos</p>
+      </div>
+      <a href="https://youtube.com/@azuredevopspro" class="btn btn-outline" target="_blank" rel="noopener" id="yt-subscribe-btn">
+        <i class="fa-brands fa-youtube" style="color:var(--yt-red)"></i> Subscribe
+      </a>
+    </div>
+
+    <!-- Channel strip -->
+    <div class="yt-channel-strip" id="yt-channel-strip">
+      <div class="skeleton" style="width:56px;height:56px;border-radius:50%;flex-shrink:0;"></div>
+      <div style="flex:1;">
+        <div class="skeleton" style="height:16px;width:160px;margin-bottom:8px;"></div>
+        <div class="skeleton" style="height:12px;width:240px;"></div>
+      </div>
+    </div>
+
+    <!-- Video grid -->
+    <div class="videos-grid" id="video-gallery">
+      <!-- Skeleton placeholders -->
+      <div class="video-card"><div class="skeleton" style="aspect-ratio:16/9;"></div><div style="padding:1rem;"><div class="skeleton" style="height:14px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+      <div class="video-card"><div class="skeleton" style="aspect-ratio:16/9;"></div><div style="padding:1rem;"><div class="skeleton" style="height:14px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+      <div class="video-card"><div class="skeleton" style="aspect-ratio:16/9;"></div><div style="padding:1rem;"><div class="skeleton" style="height:14px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+    </div>
+  </div>
 </section>
 
-<!-- Call to Action -->
-<section style="text-align: center; padding: 3rem 0;">
-  <h2>Get Started Today</h2>
-  <p>Join our community, learn from industry experts, and master DevOps on Azure</p>
-  <a href="https://t.me/azuredevopspro" class="button" target="_blank">Join Telegram Community</a>
-  <a href="mailto:contact@azuredevopspro.com" class="button button-secondary">Contact Us</a>
+<!-- =========================================================
+     BOOKS
+     ========================================================= -->
+<section class="books-section">
+  <div class="container">
+    <p class="section-label">Publications</p>
+    <p class="section-title">My Books</p>
+    <p class="section-subtitle">Deep-dive guides on Azure DevOps and cloud-native engineering.</p>
+
+    <div class="books-grid" id="books-gallery" style="margin-top:2rem;">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     LINKS — BLOG & RESUME
+     ========================================================= -->
+<section class="links-section">
+  <div class="container">
+    <p class="section-label">Explore More</p>
+    <p class="section-title">What else I share</p>
+
+    <div class="links-grid" style="margin-top:2rem;">
+      <a href="/blog/" class="link-card card-blog">
+        <div class="link-card-icon icon-green">
+          <i class="fa-solid fa-pen-nib"></i>
+        </div>
+        <h3>Technical Blog</h3>
+        <p>In-depth articles on Azure DevOps, IaC, Kubernetes, CI/CD patterns, and cloud architecture.</p>
+        <span class="link-arrow">Read articles →</span>
+      </a>
+
+      <a href="http://resume.azuredevopspro.com/" class="link-card card-resume" target="_blank" rel="noopener">
+        <div class="link-card-icon icon-blue">
+          <i class="fa-solid fa-id-card"></i>
+        </div>
+        <h3>Interactive Resume</h3>
+        <p>Explore my professional background, certifications, projects, and published books in one place.</p>
+        <span class="link-arrow">View resume →</span>
+      </a>
+    </div>
+  </div>
 </section>
