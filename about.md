@@ -8,11 +8,10 @@ permalink: /about/
 
 Azure DevOps Pro is a community initiative focused on hands-on, practical DevOps and cloud engineering. We run training sessions, tutorials, and real-world workshops aligned to Azure, GitHub, and modern agile operations.
 
-### Mission
-
-- Empower teams with DevOps culture and automation.
-- Share best practices in CI/CD, GitOps, testing and observability.
-- Build a friendly learning community.
+- Empower teams with Cloud Adoption Framework (CAF) and Well-Architected (WAF) strategies.
+- Design scalable, safe GenAI Infrastructure and AI Landing Zones.
+- Implement Enterprise Landing Zones and Platform Engineering at scale.
+- Build a community focused on the future of Cloud and AI operations.
 
 ### Future Blog Workflow
 

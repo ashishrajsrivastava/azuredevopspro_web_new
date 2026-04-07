@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-description: "Ashish Raj Srivastava — Cloud & DevOps Architect, Microsoft Certified Expert, Author, and Community Builder"
+description: "Ashish Raj Srivastava — Cloud & GenAI Platform Architect, Microsoft Certified Expert, Author, and Community Builder. Specializing in CAF, WAF, Landing Zones, and Safe Scale AI."
 ---
 
 <script>
@@ -20,20 +20,20 @@ description: "Ashish Raj Srivastava — Cloud & DevOps Architect, Microsoft Cert
         <h1 class="hero-name">
           Hi, I'm <span class="highlight">Ashish Raj</span>
         </h1>
-        <p class="hero-title">// Cloud &amp; DevOps Architect · Author · Community Builder</p>
+        <p class="hero-title">// Cloud &amp; GenAI Platform Architect · Author · Community Builder</p>
 
         <p class="hero-bio">
-          Technologist and storyteller helping engineering teams improve their velocity.
-          Microsoft Certified DevOps Expert &amp; Trainer. I write, teach, and build communities
-          around Azure DevOps, GitOps, IaC, and cloud-native engineering.
+          Technologist and storyteller helping engineering teams architect scalable platforms.
+          Expert in **Microsoft Cloud Adoption Framework (CAF)**, **Well-Architected Framework (WAF)**, and **Azure Landing Zones**. 
+          Currently focused on **GenAI Infrastructure** and **Safe Scale AI Landing Zones**.
         </p>
 
         <div class="hero-badges">
-          <span class="badge badge-blue">Azure DevOps</span>
-          <span class="badge badge-blue">Kubernetes</span>
-          <span class="badge badge-green">Terraform &amp; Bicep</span>
-          <span class="badge badge-green">GitOps</span>
-          <span class="badge badge-orange">CI/CD</span>
+          <span class="badge badge-blue">Cloud Architecture</span>
+          <span class="badge badge-blue">GenAI Platform</span>
+          <span class="badge badge-green">CAF &amp; WAF</span>
+          <span class="badge badge-green">Landing Zones</span>
+          <span class="badge badge-orange">Safe Scale AI</span>
           <span class="badge badge-orange">Platform Engineering</span>
         </div>
 
@@ -69,10 +69,10 @@ description: "Ashish Raj Srivastava — Cloud & DevOps Architect, Microsoft Cert
             <span class="term-prompt">❯</span>
             <span class="term-cmd">cat skills.txt</span>
           </div>
-          <div class="terminal-line"><span class="term-out">→ Azure DevOps &amp; GitHub Actions</span></div>
-          <div class="terminal-line"><span class="term-out">→ Terraform, Bicep, ARM</span></div>
-          <div class="terminal-line"><span class="term-out">→ Kubernetes &amp; GitOps</span></div>
-          <div class="terminal-line"><span class="term-out">→ Platform Engineering</span></div>
+          <div class="terminal-line"><span class="term-out">→ Cloud Adoption &amp; WAF Governance</span></div>
+          <div class="terminal-line"><span class="term-out">→ GenAI Infrastructure &amp; AI Landing Zones</span></div>
+          <div class="terminal-line"><span class="term-out">→ Enterprise Azure Landing Zones</span></div>
+          <div class="terminal-line"><span class="term-out">→ Cloud-Native Platform Engineering</span></div>
           <div class="terminal-line" style="margin-top:0.4rem">
             <span class="term-prompt">❯</span>
             <span class="term-cmd">certifications --list</span>
