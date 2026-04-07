@@ -1,0 +1,17 @@
+{
+  "name": "azuredevopspro-website",
+  "version": "1.0.0",
+  "description": "Azure DevOps Pro website with YouTube integration",
+  "scripts": {
+    "fetch-youtube": "node scripts/fetch-youtube-data.js",
+    "serve": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
