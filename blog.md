@@ -17,7 +17,7 @@ permalink: /blog/
     {% if posts.size > 0 %}
       <div class="blog-list">
         {% for post in posts %}
-          <a href="{{ post.url }}" class="blog-post-item">
+          <a href="{{ post.url | relative_url }}" class="blog-post-item">
             <span class="blog-post-title">{{ post.title }}</span>
             <span class="blog-post-date">{{ post.date | date: "%b %d, %Y" }}</span>
           </a>

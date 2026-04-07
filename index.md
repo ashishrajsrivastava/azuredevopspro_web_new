@@ -227,7 +227,7 @@ description: "Ashish Raj Srivastava — Cloud & DevOps Architect, Microsoft Cert
     <p class="section-title">What else I share</p>
 
     <div class="links-grid" style="margin-top:2rem;">
-      <a href="/blog/" class="link-card card-blog">
+      <a href="{{ '/blog/' | relative_url }}" class="link-card card-blog">
         <div class="link-card-icon icon-green">
           <i class="fa-solid fa-pen-nib"></i>
         </div>
