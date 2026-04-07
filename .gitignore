@@ -4,12 +4,8 @@ _site/
 .bundle/
 .DS_Store
 
-# Node
+# Node — NOTE: package-lock.json must NOT be ignored (npm ci requires it in CI)
 node_modules/
-package-lock.json
-
-# Generated data
-_data/youtube.json
 
 # Environment
 .env
