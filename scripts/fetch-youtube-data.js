@@ -13,7 +13,7 @@ const path = require('path');
 require('dotenv').config();
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
-const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
+const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID || process.env.CHANNEL_ID;
 const VIDEOS_TO_SHOW = 9;
 const DATA_DIR = path.join(__dirname, '..', '_data');
 
@@ -57,7 +57,6 @@ async function fetchYouTubeData() {
         part: 'snippet',
         playlistId: uploadsPlaylistId,
         maxResults: VIDEOS_TO_SHOW,
-        order: 'date',
         key: API_KEY,
       },
     });
