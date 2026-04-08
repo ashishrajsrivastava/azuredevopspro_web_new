@@ -105,6 +105,21 @@ async function fetchYouTubeData() {
 }
 
 function writeFallbackData() {
+  const outputFile = path.join(DATA_DIR, 'youtube.json');
+  
+  // If we already have a file with data, prevent overwriting it with empty placeholders.
+  if (fs.existsSync(outputFile)) {
+    try {
+      const existingData = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
+      if (existingData && existingData.channel && existingData.channel.title !== 'Azure DevOps Pro') {
+        console.log(`ℹ️  Preserving existing YouTube data instead of writing fallback placeholders.`);
+        return;
+      }
+    } catch (e) {
+      console.error('   → Error reading existing fallback data, proceeding to overwrite.');
+    }
+  }
+
   const fallbackData = {
     channel: {
       id: process.env.YOUTUBE_CHANNEL_ID || 'UC_default',
@@ -128,7 +143,6 @@ function writeFallbackData() {
     ],
   };
 
-  const outputFile = path.join(DATA_DIR, 'youtube.json');
   fs.writeFileSync(outputFile, JSON.stringify(fallbackData, null, 2));
   console.log(`📝 Fallback data saved to ${outputFile}`);
 }
