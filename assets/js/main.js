@@ -191,6 +191,56 @@ function renderBooks() {
 }
 
 /* ============================================================
+   TELEGRAM CHAT SIMULATION
+   ============================================================ */
+const TELEGRAM_THREADS = [
+  [
+    { sender: 'Priya K.', type: 'theirs', text: 'Just deployed to AKS using Azure DevOps pipeline 🚀 took 4 mins end to end!', time: '17:02' },
+    { sender: 'Rahul M.', type: 'theirs', text: 'Nice! Are you using Helm or Kustomize for manifests?', time: '17:03' },
+    { type: 'mine', text: 'Helm with value overrides per env. Works great with Azure DevOps variable groups 💡', time: '17:04' },
+    { sender: 'Ashish Raj', type: 'theirs', text: 'Check out the Bicep module approach I shared last week — cleaner IaC for AKS too 📚', time: '17:05' },
+    { sender: 'Jonas W.', type: 'theirs', text: 'This community is gold 🙌 learning something new every day', time: '17:06' }
+  ],
+  [
+    { sender: 'David L.', type: 'theirs', text: 'Anyone faced an issue with terraform state lock in Azure Storage?', time: '09:15' },
+    { sender: 'Sarah C.', type: 'theirs', text: 'Yes, if a pipeline crashed. You can break the lease via Azure Portal.', time: '09:17' },
+    { type: 'mine', text: 'Ensure you have retry logic on your state backend config too! And always use the break lease option cautiously.', time: '09:20' },
+    { sender: 'David L.', type: 'theirs', text: 'Thanks! Breaking the lease worked. Much appreciated 🙏', time: '09:25' }
+  ],
+  [
+    { sender: 'Elena G.', type: 'theirs', text: 'Best practices for securing secrets in CI/CD?', time: '14:30' },
+    { type: 'mine', text: 'Azure Key Vault integration with Azure Pipelines library is the standard way to go.', time: '14:32' },
+    { sender: 'Mike T.', type: 'theirs', text: 'Also check out Workload Identity Federation so you don\'t need client secrets.', time: '14:35' },
+    { sender: 'Elena G.', type: 'theirs', text: 'Oh nice, no more expiring SPN passwords! Will look into WIF.', time: '14:40' }
+  ],
+  [
+    { sender: 'Chris', type: 'theirs', text: 'What is everyone using for GenAI ops? LangChain or Semantic Kernel?', time: '11:05' },
+    { type: 'mine', text: 'We are mostly standardizing on Semantic Kernel right now for better .NET integration.', time: '11:10' },
+    { sender: 'Anna', type: 'theirs', text: 'Same here, the new MS documentation for Semantic Kernel is solid.', time: '11:15' }
+  ]
+];
+
+function renderTelegramChat() {
+  const container = document.getElementById('chat-messages');
+  if (!container) return;
+
+  // Pick a random thread
+  const thread = TELEGRAM_THREADS[Math.floor(Math.random() * TELEGRAM_THREADS.length)];
+
+  container.innerHTML = thread.map((msg, idx) => {
+    const delay = (0.1 + (idx * 0.2)).toFixed(1);
+    const senderHtml = msg.sender ? `<span class="bubble-sender">${escHtml(msg.sender)}</span>` : '';
+    return `
+      <div class="chat-bubble ${msg.type}" style="animation-delay:${delay}s">
+        ${senderHtml}
+        <div class="bubble-text">${escHtml(msg.text)}</div>
+        <span class="bubble-time">${msg.time}</span>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ============================================================
    UTILS
    ============================================================ */
 function escHtml(str) {
@@ -224,4 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Books
   renderBooks();
+
+  // Telegram Chat Simulation
+  renderTelegramChat();
 });
