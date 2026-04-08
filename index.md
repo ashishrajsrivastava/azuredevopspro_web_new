@@ -135,35 +135,14 @@ description: "Ashish Raj Srivastava — Cloud & GenAI Platform Architect, Micros
           </div>
         </div>
         <div class="chat-messages" id="chat-messages">
-          <div class="chat-bubble theirs" style="animation-delay:0.1s">
-            <span class="bubble-sender">Priya K.</span>
-            <div class="bubble-text">Just deployed to AKS using Azure DevOps pipeline 🚀 took 4 mins end to end!</div>
-            <span class="bubble-time">17:02</span>
-          </div>
-          <div class="chat-bubble theirs" style="animation-delay:0.3s">
-            <span class="bubble-sender">Rahul M.</span>
-            <div class="bubble-text">Nice! Are you using Helm or Kustomize for manifests?</div>
-            <span class="bubble-time">17:03</span>
-          </div>
-          <div class="chat-bubble mine" style="animation-delay:0.5s">
-            <div class="bubble-text">Helm with value overrides per env. Works great with Azure DevOps variable groups 💡</div>
-            <span class="bubble-time">17:04</span>
-          </div>
-          <div class="chat-bubble theirs" style="animation-delay:0.7s">
-            <span class="bubble-sender">Ashish Raj</span>
-            <div class="bubble-text">Check out the Bicep module approach I shared last week — cleaner IaC for AKS too 📚</div>
-            <span class="bubble-time">17:05</span>
-          </div>
-          <div class="chat-bubble theirs" style="animation-delay:0.9s">
-            <span class="bubble-sender">Jonas W.</span>
-            <div class="bubble-text">This community is gold 🙌 learning something new every day</div>
-            <span class="bubble-time">17:06</span>
-          </div>
+          <!-- Populated dynamically by JS on page load -->
         </div>
-        <div class="chat-input-bar">
-          <div class="chat-input-mock">Join to participate...</div>
+        <a href="https://t.me/azuredevopspro" target="_blank" rel="noopener" class="chat-input-bar" style="text-decoration:none; display:flex;">
+          <div class="chat-input-mock" style="pointer-events: auto; cursor: pointer; transition: background 0.2s; color: var(--text-primary); opacity: 0.8;">
+            Join to participate in the conversation...
+          </div>
           <div class="chat-send-btn"><i class="fa-solid fa-paper-plane"></i></div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
