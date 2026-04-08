@@ -1,8 +1,8 @@
 title: Azure DevOps Pro
 email: contact@azuredevopspro.com
 description: "Cloud & GenAI Platform Architect. Expert in CAF, WAF, Azure Landing Zones, and Safe Scale AI Platforms."
-baseurl: "/azuredevopspro_web_new"
-url: "https://ashishrajsrivastava.github.io"
+baseurl: ""
+url: "https://azuredevopspro.com"
 
 # Build settings
 markdown: kramdown
