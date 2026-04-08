@@ -24,8 +24,8 @@ description: "Ashish Raj Srivastava — Cloud & GenAI Platform Architect, Micros
 
         <p class="hero-bio">
           Technologist and storyteller helping engineering teams architect scalable platforms.
-          Expert in **Microsoft Cloud Adoption Framework (CAF)**, **Well-Architected Framework (WAF)**, and **Azure Landing Zones**. 
-          Currently focused on **GenAI Infrastructure** and **Safe Scale AI Landing Zones**.
+          Expert in <b> Microsoft Cloud Adoption Framework (CAF)</b>, <b> Well-Architected Framework (WAF) </b>, and <b> Azure Landing Zones </b>. 
+          Currently focused on <b> GenAI Infrastructure </b>> and <b> Safe Scale AI Landing Zones</b> .
         </p>
 
         <div class="hero-badges">
