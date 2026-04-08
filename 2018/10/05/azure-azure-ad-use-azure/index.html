@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cloud & GenAI Platform Architect. Expert in CAF, WAF, Azure Landing Zones, and Safe Scale AI Platforms." />
+    <title>Use Azure Active Directory authentication and authorization in your App. | Azure DevOps Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/azuredevopspro_web_new/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="site-logo" href="/azuredevopspro_web_new/">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AzureDevOpsPro</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/azuredevopspro_web_new/" class="nav-link">Home</a>
+          <a href="/azuredevopspro_web_new/blog/" class="nav-link">Blog</a>
+          <a href="http://resume.azuredevopspro.com/" class="nav-link" target="_blank" rel="noopener">Resume <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75em;opacity:0.7;"></i></a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          </button>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="/azuredevopspro_web_new/" class="nav-link">Home</a>
+        <a href="/azuredevopspro_web_new/blog/" class="nav-link">Blog</a>
+        <a href="http://resume.azuredevopspro.com/" class="nav-link" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container post-page">
+  <article>
+    <h1>Use Azure Active Directory authentication and authorization in your App.</h1>
+    <p class="post-meta">October 05, 2018 &middot; cloud</p>
+    <p>October 5, 2018</p>
+
+<h1 id="use-azure-active-directory-authentication-and-authorization-in-your-app">Use Azure Active Directory authentication and authorization in your App.</h1>
+
+<p><img src="https://www.identityandcloud.com/wp-content/uploads/2016/08/acc_ctrl1.png" alt="Image result for azure active directory" /></p>
+
+<p><strong>Azure Active Directory(aka AAD or Azure AD)</strong> is default identity provider for all the resources in Azure. Azure AD is used for all kind of role based access control in Azure.</p>
+
+<p>If your organization already using Azure cloud and have organization user in Azure AD then why don’t you use Azure for letting your organization user login to your app the way they do for all other enterprise applications.</p>
+
+<p>If you are an application developer and have an application with role based access control requirement then you can utilise the same Azure AD underlying infrastructure to authenticate and authorize users. Consumers will not need separate username and password for your app rather they use the same organization account they use for login to services like O365 or Azure.</p>
+
+<p>Azure AD comply with the industry standards and security controls so by utilizing it in your app you no longer have to worry about the login module update or complications of authentication and authorization security controls in your login module rather you get it inherently from Azure AD. You can focus on your business logic what you do BEST!!</p>
+
+<p>To use Azure AD in your custom app you will need to go through following steps:</p>
+
+<p>Register an app in Azure AD (You will need Azure AD administrator role for this, but you are developer and it does not make any sense to you! well get a ticket created with Azure team in your organization. They know what this is). Refer this link <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-register-an-app">https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-register-an-app</a></p>
+
+<p>You will need to add authentication in your application, depending upon application language code will change, here is the list of programming language you can get started with:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Mobile and native apps</strong></td>
+      <td><strong>Web apps and web APIs</strong></td>
+      <td><strong>Integrate directly with protocols</strong></td>
+    </tr>
+    <tr>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-ios">Add sign-in to an iOS application</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-javascript-spa">Add sign-in to a JavaScript Single Page Application (SPA)</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-register-an-app">Register an application</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-android">Add sign-in to an Android application</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-asp-webapp">Add sign-in to a ASP.NET application</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow">Mobile applications with the OAuth 2.0 protocol</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/guidedsetups/active-directory-mobileanddesktopapp-windowsdesktop-intro">Add sign-in to a Windows Desktop application</a></td>
+      <td><a href="https://azure.microsoft.com/resources/samples/active-directory-aspnetcore-webapp-openidconnect-v2">Add sign-in to a ASP.NET Core Web application</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc">Web applications with the OpenID Connect protocol</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Azure-Samples/active-directory-xamarin-native-v2">Add sign-in to a multi-platform Xamarin application</a></td>
+      <td><a href="https://github.com/AzureADQuickStarts/AppModelv2-WebApp-OpenIDConnect-nodejs">Add sign-in to a Node.js web application</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-implicit-grant-flow">JavaScript SPAs with the OpenID Connect protocol</a></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><a href="https://github.com/azureadquickstarts/appmodelv2-nativeclient-dotnet">Protect an ASP.NET Web API</a></td>
+      <td><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow">Daemon applications with the OAuth 2.0 client credentials flow</a></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><a href="https://azure.microsoft.com/resources/samples/active-directory-dotnet-native-aspnetcore-v2">Protect an ASP.NET Core Web API</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Done updating code, run your app and authenticate with azure AD!</p>
+
+<p>Authorization: Now you want to control the access to app resources based on user’s role, that’s too possible.</p>
+
+<p>You have two options here:</p>
+
+<p>Use App roles: you create app roles in registered app in Azure AD manifest (again give a ring to your Azure team, they know what you are asking for) Refer this link for details. <a href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles#roles-using-azure-ad-app-roles">https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles#roles-using-azure-ad-app-roles</a> , once role is added, you access the role and control the logic in app based on user’s role.</p>
+
+<p>Use Azure AD group claims: You create a security group in Azure AD, fetch that (you get Object ID from claims) get the roles further using Azure AD graph API and control your logic in app based on user’s group. Refer this link <a href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles#roles-using-azure-ad-security-groups">https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles#roles-using-azure-ad-security-groups</a></p>
+
+<p>References : <a href="https://docs.microsoft.com/">https://docs.microsoft.com</a></p>
+
+  </article>
+
+  <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-subtle);">
+    <a href="/azuredevopspro_web_new/blog/" class="btn btn-outline">
+      <i class="fa-solid fa-arrow-left"></i> Back to Blog
+    </a>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AzureDevOpsPro</span>
+          <span class="logo-bracket"> /&gt;</span>
+          <p class="footer-tagline"># DevOps is culture, tools are outcome 🚀</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://youtube.com/@azuredevopspro" class="social-btn yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://linkedin.com/in/ashishrajsrivastava" class="social-btn li" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://t.me/azuredevopspro" class="social-btn tg" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://github.com/ashishrajsrivastava" class="social-btn gh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <p class="footer-copy">© 2026 Azure DevOps Pro &middot; <a href="mailto:contact@azuredevopspro.com">contact@azuredevopspro.com</a></p>
+      </div>
+    </footer>
+
+    <script src="/azuredevopspro_web_new/assets/js/main.js"></script>
+  </body>
+</html>
