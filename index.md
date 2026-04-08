@@ -170,6 +170,37 @@ description: "Ashish Raj Srivastava — Cloud & GenAI Platform Architect, Micros
 </section>
 
 <!-- =========================================================
+     COMMUNITY HEROES
+     ========================================================= -->
+<section class="heroes-section">
+  <div class="container">
+    <p class="section-label">Recognition</p>
+    <p class="section-title">Community Heroes</p>
+    <p class="section-subtitle">Meet the amazing professionals helping our community grow and thrive through knowledge sharing.</p>
+
+    <div class="heroes-grid">
+      {% for hero in site.data.heroes %}
+        <a href="{{ hero.linkedin }}" class="hero-profile-card" target="_blank" rel="noopener">
+          <div class="hero-profile-header">
+            <div class="hero-avatar-wrap">
+              <img src="{{ hero.image }}" alt="{{ hero.name }}" class="hero-avatar" loading="lazy" />
+              <div class="hero-li-badge"><i class="fa-brands fa-linkedin-in"></i></div>
+            </div>
+            <div class="hero-info">
+              <span class="hero-name-label">{{ hero.name }}</span>
+              <span class="hero-title-label">{{ hero.title }}</span>
+            </div>
+          </div>
+          <div class="hero-view-profile">
+            View LinkedIn Profile <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
      YOUTUBE VIDEOS
      ========================================================= -->
 <section class="yt-section">
