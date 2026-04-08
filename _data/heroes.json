@@ -1,20 +1,32 @@
 [
   {
-    "name": "Alex Rivier",
-    "title": "Cloud Platform Engineer | Microsoft MVP",
+    "name": "NIraj Kumar",
+    "title": "Ex-AWS, Ex-Microsoft, Generative AI Leader, Field CTO & Cloud Solutions Architect ",
+    "image": "https://media.licdn.com/dms/image/v2/D4E35AQFfHfK4NscRCQ/profile-framedphoto-shrink_400_400/B4EZyV2n6bGYAc-/0/1772040650673?e=1776290400&v=beta&t=Vcj-Hdhg7mr95DfFh7R33iKCmKqROvQ8SXAOtaL0STA",
+    "linkedin": "https://www.linkedin.com/in/nirajkum/"
+  },
+  {
+    "name": "Sudeep Lohith",
+    "title": "Cloud Operations Engineer",
+    "image": "https://media.licdn.com/dms/image/v2/D5603AQFi0sAhGZWzHg/profile-displayphoto-scale_400_400/B56ZpPWxJaIsBI-/0/1762267960732?e=1777507200&v=beta&t=AAQUVaEwCINXOd5S1Jz3DS94wQjlDjDvmUnNfZPEHgw",
+    "linkedin": "https://www.linkedin.com/in/sudlo/"
+  },
+  {
+    "name": "PULLARAO KOTA",
+    "title": "Multi Cloud | DevOps | Platform Engineer | Azure | AWS | GCP |",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQFe64iONvR5Dw/profile-displayphoto-scale_400_400/B4EZdl9vmZHgAk-/0/1749762375334?e=1777507200&v=beta&t=Bram2SBWlO8UaMws8IwayuHLfplO1OiG2YEombx5eQU",
+    "linkedin": "https://linkedin.com/in/ashishrajsrivastava"
+  },
+  {
+    "name": "Deepak Dhami",
+    "title": "Staff SWE Cloud Infrastructure",
+    "image": "https://media.licdn.com/dms/image/v2/C5103AQH8h8RIOVfwRQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1584453346707?e=1777507200&v=beta&t=dxa6gzsMAqdPbe-vVyG4NDASJLzQNWsLl-pLO75RpEA",
+    "linkedin": "https://www.linkedin.com/in/deepaksinghdhami"
+  },
+  {
+    "name": "vijay devops",
+    "title": "DevOps Engineer at Tata Consultancy Services",
     "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
-    "linkedin": "https://linkedin.com/in/ashishrajsrivastava"
-  },
-  {
-    "name": "Sarah Chen",
-    "title": "Principal Architect @ TechFlow | GenAI Community Lead",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-    "linkedin": "https://linkedin.com/in/ashishrajsrivastava"
-  },
-  {
-    "name": "Marcus Thorne",
-    "title": "DevOps Specialist | Author & Speaker",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
-    "linkedin": "https://linkedin.com/in/ashishrajsrivastava"
+    "linkedin": "https://www.linkedin.com/in/vijay-devops-026181171/"
   }
 ]
