@@ -1203,20 +1203,24 @@ section {
 .hero-avatar-wrap {
   width: 72px;
   height: 72px;
+  min-width: 72px;
+  min-height: 72px;
+  flex: 0 0 72px;
   border-radius: 50%;
   padding: 3px;
   background: linear-gradient(135deg, var(--li-blue), var(--accent-green));
   position: relative;
-  flex-shrink: 0;
 }
 
 .hero-avatar {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   border-radius: 50%;
   background: var(--bg);
   object-fit: cover;
   border: 2px solid var(--bg-surface);
+  display: block;
 }
 
 .hero-li-badge {
@@ -1275,6 +1279,7 @@ section {
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
+  .heroes-grid { grid-template-columns: 1fr; }
   .terminal-card { width: 100%; max-width: 380px; }
   .telegram-card { grid-template-columns: 1fr; }
   .telegram-chat { min-height: 340px; }
