@@ -9,6 +9,7 @@ tags:
   - agent-safety
   - observability
 image: "/assets/images/posts/foundry-redteaming-cover.png"
+image_alt: "Abstract architecture diagram showing Microsoft Foundry red teaming for agents and LLMs"
 ---
 
 # Red teaming agents and LLMs in Microsoft Foundry
