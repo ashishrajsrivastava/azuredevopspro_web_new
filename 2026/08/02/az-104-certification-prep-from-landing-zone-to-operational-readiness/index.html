@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cloud & GenAI Platform Architect. Expert in CAF, WAF, Azure Landing Zones, and Safe Scale AI Platforms." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azure DevOps Pro" />
+    <meta property="og:title" content="AZ-104 certification prep: from landing zone to operational readiness" />
+    <meta property="og:description" content="Cloud & GenAI Platform Architect. Expert in CAF, WAF, Azure Landing Zones, and Safe Scale AI Platforms." />
+    <meta property="og:url" content="https://azuredevopspro.com/2026/08/02/az-104-certification-prep-from-landing-zone-to-operational-readiness/" />
+    <meta property="og:image" content="https://azuredevopspro.com/assets/images/posts/az-104-architecture.png" />
+    <meta property="og:image:alt" content="Abstract architecture diagram showing AZ-104 study domains and lab flow" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AZ-104 certification prep: from landing zone to operational readiness" />
+    <meta name="twitter:description" content="Cloud & GenAI Platform Architect. Expert in CAF, WAF, Azure Landing Zones, and Safe Scale AI Platforms." />
+    <meta name="twitter:image" content="https://azuredevopspro.com/assets/images/posts/az-104-architecture.png" />
+    <meta name="twitter:image:alt" content="Abstract architecture diagram showing AZ-104 study domains and lab flow" />
+    <title>AZ-104 certification prep: from landing zone to operational readiness | Azure DevOps Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=1785889735" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="site-logo" href="/">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AzureDevOpsPro</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="http://resume.azuredevopspro.com/" class="nav-link" target="_blank" rel="noopener">Resume <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75em;opacity:0.7;"></i></a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          </button>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="http://resume.azuredevopspro.com/" class="nav-link" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container post-page">
+  <article>
+    <h1>AZ-104 certification prep: from landing zone to operational readiness</h1>
+    <p class="post-meta">August 02, 2026 &middot; </p>
+    <p>AZ-104 rewards practical understanding more than rote recall. It tests whether Azure fundamentals line up in a way that makes sense when a real application needs to run.</p>
+
+<p>The simplest way to study is to use one simple web application as the reference model. Treat that architecture as a memory aid, not as the official exam architecture. Put everything around that app: identity, governance, storage, compute, networking, monitoring, automation, and recovery. That study model aligns with the official Microsoft learning path (<a href="https://learn.microsoft.com/en-in/training/courses/az-104t00">AZ-104T00 course</a>) and with how Azure is operated in practice.</p>
+
+<p>Microsoft organizes the AZ-104 skills in this order:</p>
+<ol>
+  <li>Manage Azure identities and governance</li>
+  <li>Implement and manage storage</li>
+  <li>Deploy and manage Azure compute resources</li>
+  <li>Implement and manage virtual networking</li>
+  <li>Monitor and maintain Azure resources</li>
+</ol>
+
+<p>That order matters. It starts with control, then durability, then runtime, then traffic flow, and finally operations. A strong study plan follows the same sequence.</p>
+
+<h2 id="start-with-the-practice-environment-and-guardrails">Start with the practice environment and guardrails</h2>
+
+<p>Before a workload is deployed, the environment needs guardrails.</p>
+
+<p>For the official Microsoft Learn path, start here: <a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/">AZ-104: Manage identities and governance in Azure</a>.</p>
+
+<p>Identity and governance answer the basic questions:</p>
+<ul>
+  <li>Who can deploy?</li>
+  <li>Who can change production?</li>
+  <li>Which subscriptions and resource groups are allowed?</li>
+  <li>What policy rules must every resource follow?</li>
+  <li>How are costs tracked and bounded?</li>
+</ul>
+
+<p>For AZ-104, the important pieces are Microsoft Entra ID users and groups, role-based access control, management groups, subscriptions, resource groups, Azure Policy, locks, tags, and budgets. These are not abstract administrative features. They decide whether the rest of the platform stays manageable after the first deployment.</p>
+
+<p>For a web app, this is the difference between a clean landing zone and a subscription full of untracked resources, ad hoc permissions, and expensive surprises.</p>
+
+<h2 id="add-storage-next">Add storage next</h2>
+
+<p>Storage is where the application becomes durable.</p>
+
+<p>The official Microsoft Learn path section is here: <a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/">AZ-104: Implement and manage storage in Azure</a>.</p>
+
+<p>A simple web app usually needs some combination of:</p>
+<ul>
+  <li>Blob storage for uploads, static assets, logs, or backups</li>
+  <li>Azure Files for shared file access</li>
+  <li>Lifecycle rules for retention and cleanup</li>
+  <li>Redundancy choices for resilience</li>
+  <li>SAS tokens, access keys, or identity-based access depending on the access pattern</li>
+</ul>
+
+<p>AZ-104 expects understanding of storage accounts, redundancy options, encryption, snapshots, versioning, soft delete, and access control. The exam also expects practical judgment. For example, a workload that needs private access and predictable lifecycle management should not be treated the same way as a publicly accessible Blob container.</p>
+
+<p>Storage is often where exam questions become operational rather than theoretical. The right answer depends on access scope, resilience requirements, and how the application data is actually consumed.</p>
+
+<h2 id="move-the-workload-onto-compute">Move the workload onto compute</h2>
+
+<p>Compute is the application runtime.</p>
+
+<p>For the official Microsoft Learn path, use: <a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/">AZ-104: Deploy and manage Azure compute resources</a>.</p>
+
+<p>For AZ-104, this starts with virtual machines and scale sets, then moves into containers and managed application platforms such as Azure App Service. That progression matters because it mirrors the move from full control to managed service.</p>
+
+<p>A practical study path looks like this:</p>
+<ul>
+  <li>Learn VM creation, sizing, disks, availability zones, and scale sets first</li>
+  <li>Use one focused ARM template or Bicep exercise to understand repeatable deployments and parameterization</li>
+  <li>Understand container options next, especially Azure Container Registry, Container Instances, and Container Apps</li>
+  <li>Finish with App Service, because it shows how Azure abstracts the platform while still exposing operational knobs such as scaling, deployment slots, TLS, custom domains, and backups</li>
+</ul>
+
+<p>This is also a useful way to explain the exam to someone new to Azure. Compute is not just where code runs. It is where operational tradeoffs show up. More control usually means more work. More managed services usually mean fewer moving parts, but also fewer escape hatches.</p>
+
+<h2 id="wire-in-virtual-networking">Wire in virtual networking</h2>
+
+<p>Once the app runs and stores data, it needs safe network paths.</p>
+
+<p>Follow the official Microsoft Learn path here: <a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/">AZ-104: Configure and manage virtual networks for Azure administrators</a>.</p>
+
+<p>Networking topics on AZ-104 include:</p>
+<ul>
+  <li>Virtual networks and subnets</li>
+  <li>Public IP addresses</li>
+  <li>Peering</li>
+  <li>Network security groups and effective security rules</li>
+  <li>Application security groups</li>
+  <li>User-defined routes</li>
+  <li>Bastion</li>
+  <li>Private endpoints</li>
+  <li>Service endpoints</li>
+  <li>DNS</li>
+  <li>Load balancing</li>
+  <li>Connectivity troubleshooting with Network Watcher</li>
+</ul>
+
+<p>This layer decides who can reach what, from where, and over which path.</p>
+
+<p>In the web app model, networking connects the runtime to its data and to its users. It also enforces segmentation. Public traffic should not automatically reach everything behind the application. Admin access should not depend on exposed management ports. Internal dependencies should not be forced through the internet when private connectivity is available.</p>
+
+<p>That is the practical mental model behind the networking section of the exam: traffic control, segmentation, and name resolution.</p>
+
+<h2 id="monitor-maintain-and-recover">Monitor, maintain, and recover</h2>
+
+<p>The last major AZ-104 domain is the one that turns a deployment into an operating service.</p>
+
+<p>Use the official Microsoft Learn path here: <a href="https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/">AZ-104: Monitor and back up Azure resources</a>.</p>
+
+<p>Monitoring and maintenance cover:</p>
+<ul>
+  <li>Azure Monitor metrics and logs</li>
+  <li>Log queries and alert rules</li>
+  <li>Action groups and alert processing</li>
+  <li>Insights for VMs, storage, and networks</li>
+  <li>Network Watcher and Connection Monitor</li>
+  <li>Backup and restore</li>
+  <li>Recovery Services vaults and backup vaults</li>
+  <li>Site Recovery and failover</li>
+</ul>
+
+<p>This is where the platform stops being a diagram and starts behaving like an actual system.</p>
+
+<p>A web app that cannot be observed is already a liability. A web app that cannot be restored is worse. Good monitoring should make it obvious when the workload is unhealthy, which component is failing, and which action comes next. Good backup and recovery should make a restore test boring.</p>
+
+<p>That last point matters. Operational readiness is not the same thing as having a backup configured. It means the restore path has been tested, the access path is known, and the business impact is understood before a real outage happens.</p>
+
+<h2 id="build-a-minimum-viable-lab-path">Build a minimum viable lab path</h2>
+
+<p>Use Microsoft Learn sandboxes where a module provides one. If a sandbox is not available, use Azure free-account credits or a personal subscription with a budget and cost alert configured before deployment. Confirm that your account has permission to create resource groups, role assignments, networking resources, and monitoring rules before starting.</p>
+
+<p>A practical lab progression is:</p>
+
+<ol>
+  <li><strong>Identity and governance:</strong> Create a resource group, apply tags and a resource lock, assign a least-privilege role to a test group, and inspect effective access. Success means the intended user can perform the allowed action and cannot perform a higher-privilege action.</li>
+  <li><strong>Storage:</strong> Create a storage account and Blob container, configure lifecycle management and soft delete, upload a test object, and validate recovery. Success means the object can be restored and the lifecycle rule is visible.</li>
+  <li><strong>Compute:</strong> Deploy a small VM or App Service instance, then repeat one deployment using ARM or Bicep with parameters. Success means the resource is reproducible without manually recreating each portal step.</li>
+  <li><strong>Networking:</strong> Create a virtual network and subnets, apply an NSG, inspect effective rules, and validate connectivity with Network Watcher. Success means permitted traffic works and denied traffic is demonstrably blocked.</li>
+  <li><strong>Monitoring and recovery:</strong> Enable diagnostic settings, create a metric or log alert with an action group, and test backup or restore for a low-cost resource. Success means the alert fires and the recovery procedure is documented.</li>
+</ol>
+
+<p>Delete the resource group after each exercise unless the next lab depends on it. Treat Bastion, private endpoints, VM scale sets, and Site Recovery as optional stretch exercises because they can add cost or complexity.</p>
+
+<h2 id="keep-deployment-automation-in-the-picture">Keep deployment automation in the picture</h2>
+
+<p>Automation is not a separate AZ-104 domain, but ARM templates and Bicep are relevant to measured deployment tasks.</p>
+
+<p>Use one focused infrastructure-as-code exercise to make deployment repeatable and to understand parameters, dependencies, and update behavior. Full CI/CD pipeline design and broad Azure DevOps implementation are useful professional skills, but they should not be presented as core AZ-104 requirements.</p>
+
+<p>For exam preparation, the main point is simple: understand how Azure resources can be deployed and updated consistently without relying only on hand-built portal steps.</p>
+
+<h2 id="put-governance-and-operational-readiness-around-everything">Put governance and operational readiness around everything</h2>
+
+<p>Governance does not sit at the end of the journey. It surrounds the whole workload.</p>
+
+<p>A realistic Azure environment usually needs:</p>
+<ul>
+  <li>Naming and tagging standards</li>
+  <li>Policy assignments</li>
+  <li>Access reviews and scope discipline</li>
+  <li>Budget alerts and cost visibility</li>
+  <li>Backup and retention rules</li>
+  <li>Change control for production systems</li>
+  <li>Regular validation of failover and restore paths</li>
+</ul>
+
+<p>This is the layer that separates a demo from something that can survive monthly operations. It also explains why AZ-104 includes more than service configuration. The certification expects proof that Azure resources can be managed in a way that is secure, auditable, and supportable.</p>
+
+<h2 id="a-suggested-study-sequence">A suggested study sequence</h2>
+
+<p>The following is a suggested learning progression, not an official question order. It follows the web app lifecycle so the domains build on one another:</p>
+<ol>
+  <li>Create the practice environment and guardrails with identity and governance</li>
+  <li>Add storage for application data and resilience</li>
+  <li>Place the workload on compute and repeat one deployment with ARM or Bicep</li>
+  <li>Secure and route traffic with networking</li>
+  <li>Observe, back up, and recover the system</li>
+  <li>Revisit weak areas with targeted labs and practice assessments</li>
+</ol>
+
+<p>That sequence is easier to remember than a list of disconnected services. It also matches how Azure is used outside the exam room.</p>
+
+<h2 id="final-takeaway">Final takeaway</h2>
+
+<p>AZ-104 rewards practical thinking. The questions are easier to reason about when every service has a place in a real architecture.</p>
+
+<p>Start with the official Microsoft learning path, but use the simple web application only as a study aid. Identity and governance set the rules. Storage keeps the data. Compute runs the workload. Networking controls access. Monitoring and recovery keep the system honest.</p>
+
+<p>Exam objectives change. Before scheduling the exam, re-check the live <a href="https://learn.microsoft.com/en-in/training/courses/az-104t00">AZ-104 course and study resources</a> and confirm that your labs still match the current skills measured.</p>
+
+<p>Once that model is clear, the exam stops looking like a catalog and starts looking like a platform.</p>
+
+  </article>
+
+  <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-subtle);">
+    <a href="/blog/" class="btn btn-outline">
+      <i class="fa-solid fa-arrow-left"></i> Back to Blog
+    </a>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AzureDevOpsPro</span>
+          <span class="logo-bracket"> /&gt;</span>
+          <p class="footer-tagline"># DevOps is culture, tools are outcome 🚀</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://youtube.com/@azuredevopspro" class="social-btn yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://linkedin.com/in/ashishrajsrivastava" class="social-btn li" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://t.me/azuredevopspro" class="social-btn tg" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://github.com/ashishrajsrivastava" class="social-btn gh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <p class="footer-copy">© 2026 Azure DevOps Pro &middot; <a href="mailto:contact@azuredevopspro.com">contact@azuredevopspro.com</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js?v=1785889735"></script>
+  </body>
+</html>
