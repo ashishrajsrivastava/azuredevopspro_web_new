@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="How product owners and developers can reduce token spend and improve solution quality by combining purpose-built Azure AI Foundry services with large language models." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azure DevOps Pro" />
+    <meta property="og:title" content="Building cost-effective AI solutions with Azure AI Foundry services and LLMs" />
+    <meta property="og:description" content="How product owners and developers can reduce token spend and improve solution quality by combining purpose-built Azure AI Foundry services with large language models." />
+    <meta property="og:url" content="https://azuredevopspro.com/2026/10/09/building-cost-effective-ai-solutions-with-foundry-services-and-llms/" />
+    <meta property="og:image" content="https://azuredevopspro.com/assets/images/posts/cost-effective-ai-foundry-llm-hero.jpg" />
+    <meta property="og:image:alt" content="Two-tier diagram showing Foundry services first and LLM reasoning second for a cost-effective AI solution" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Building cost-effective AI solutions with Azure AI Foundry services and LLMs" />
+    <meta name="twitter:description" content="How product owners and developers can reduce token spend and improve solution quality by combining purpose-built Azure AI Foundry services with large language models." />
+    <meta name="twitter:image" content="https://azuredevopspro.com/assets/images/posts/cost-effective-ai-foundry-llm-hero.jpg" />
+    <meta name="twitter:image:alt" content="Two-tier diagram showing Foundry services first and LLM reasoning second for a cost-effective AI solution" />
+    <title>Building cost-effective AI solutions with Azure AI Foundry services and LLMs | Azure DevOps Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=1791741034" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="site-logo" href="/">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AzureDevOpsPro</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="http://resume.azuredevopspro.com/" class="nav-link" target="_blank" rel="noopener">Resume <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75em;opacity:0.7;"></i></a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          </button>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="http://resume.azuredevopspro.com/" class="nav-link" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container post-page">
+  <article>
+    <h1>Building cost-effective AI solutions with Azure AI Foundry services and LLMs</h1>
+    <p class="post-meta">October 09, 2026 &middot; </p>
+    <p><img src="/assets/images/posts/cost-effective-ai-foundry-llm-hero.jpg" alt="Building cost-effective AI solutions with Azure AI Foundry services and LLMs" /></p>
+
+<p>Many AI projects start the same way: a team opens Azure AI Foundry, connects an LLM, and begins building.</p>
+
+<p>That is a valid way to prototype.
+It is not always the most cost-effective way to build a production solution.</p>
+
+<p>In many real-world use cases, the expensive part is not reasoning.
+It is extraction, transcription, translation, redaction, or classification.
+Those are exactly the kinds of jobs that Azure AI Foundry already supports through purpose-built services.</p>
+
+<p>The practical pattern is simple:</p>
+
+<blockquote>
+  <p><strong>Use Foundry services for the specialist work, and use the LLM only for the part that truly needs reasoning.</strong></p>
+</blockquote>
+
+<p>That approach reduces token spend, improves consistency, and keeps the solution easier to operate.</p>
+
+<h2 id="why-this-matters-for-product-owners-and-developers">Why this matters for product owners and developers</h2>
+
+<p>If you are a product owner, the business question is usually:</p>
+
+<ul>
+  <li>how do we deliver the feature with the right cost profile?</li>
+  <li>how do we avoid paying LLM tokens for work that does not need them?</li>
+  <li>how do we make the solution reliable enough for production?</li>
+</ul>
+
+<p>If you are a developer, the technical question is usually:</p>
+
+<ul>
+  <li>which component should do OCR, translation, or transcription?</li>
+  <li>what should be sent to the LLM?</li>
+  <li>how do we keep the prompt small and the output predictable?</li>
+</ul>
+
+<p>The answer is usually the same:</p>
+
+<ol>
+  <li>let a specialist Foundry service do the domain-specific preprocessing</li>
+  <li>pass the reduced output into the LLM</li>
+  <li>use the LLM only for reasoning, summarization, or next-step generation</li>
+</ol>
+
+<h2 id="the-foundry-services-that-help-reduce-cost">The Foundry services that help reduce cost</h2>
+
+<p>Azure AI Foundry gives you services that can handle common pre-LLM tasks.</p>
+
+<h3 id="content-understanding">Content Understanding</h3>
+<p>Use this for documents, invoices, forms, contracts, and similar content where you need fields or structured extraction.</p>
+
+<p>Microsoft documents Content Understanding for scenarios such as:</p>
+<ul>
+  <li>intelligent document processing</li>
+  <li>invoice processing</li>
+  <li>contract analysis</li>
+  <li>claims management</li>
+  <li>tax preparation</li>
+</ul>
+
+<h3 id="speech">Speech</h3>
+<p>Use this for:</p>
+<ul>
+  <li>speech-to-text</li>
+  <li>text-to-speech</li>
+  <li>speech translation</li>
+  <li>batch or real-time transcription</li>
+</ul>
+
+<p>This is useful when your input is audio and your real task is not “understand audio” but “turn speech into a usable text workflow”.</p>
+
+<h3 id="translator">Translator</h3>
+<p>Use this for text and document translation, especially when you need:</p>
+<ul>
+  <li>preserved document layout</li>
+  <li>glossary-driven terminology</li>
+  <li>multilingual input handling</li>
+  <li>translated output before downstream reasoning</li>
+</ul>
+
+<h3 id="language">Language</h3>
+<p>Use this for:</p>
+<ul>
+  <li>PII detection and redaction</li>
+  <li>conversational PII redaction</li>
+  <li>health text analysis</li>
+</ul>
+
+<p>This is especially valuable when you want to remove sensitive data before the LLM sees the content.</p>
+
+<h2 id="the-cost-effective-architecture-pattern">The cost-effective architecture pattern</h2>
+
+<p>A good hybrid flow looks like this:</p>
+
+<p><strong>Input</strong> → <strong>Foundry specialist service</strong> → <strong>structured / redacted output</strong> → <strong>LLM reasoning</strong> → <strong>business action</strong></p>
+
+<p>That means the LLM receives a smaller and cleaner payload.</p>
+
+<p>Instead of asking the model to:</p>
+<ul>
+  <li>read a full invoice PDF</li>
+  <li>perform OCR</li>
+  <li>extract fields</li>
+  <li>validate totals</li>
+  <li>explain the result</li>
+</ul>
+
+<p>you let the specialist service handle extraction and send only the useful summary to the model.</p>
+
+<p>That is where the cost savings come from.</p>
+
+<h2 id="a-concrete-use-case-invoice-review">A concrete use case: invoice review</h2>
+
+<p>Let’s say your finance team receives vendor invoices in PDF format.
+The system needs to:</p>
+<ul>
+  <li>extract invoice fields</li>
+  <li>validate totals and tax</li>
+  <li>flag exceptions</li>
+  <li>generate a summary for review</li>
+</ul>
+
+<h3 id="step-1-use-content-understanding">Step 1: Use Content Understanding</h3>
+<p>Content Understanding extracts the structured fields from the invoice.
+For example:</p>
+<ul>
+  <li>invoice number</li>
+  <li>vendor name</li>
+  <li>total amount</li>
+  <li>tax</li>
+  <li>due date</li>
+  <li>confidence score</li>
+  <li>exception flags</li>
+</ul>
+
+<h3 id="step-2-apply-business-rules">Step 2: Apply business rules</h3>
+<p>Your application can then check:</p>
+<ul>
+  <li>is the invoice above the auto-approval threshold?</li>
+  <li>is the purchase order missing?</li>
+  <li>does the tax rate look unusual?</li>
+  <li>are there mismatches in the totals?</li>
+</ul>
+
+<h3 id="step-3-call-the-llm-only-for-reasoning">Step 3: Call the LLM only for reasoning</h3>
+<p>Now the LLM gets the structured result, not the full raw document.</p>
+
+<p>Example input to the LLM:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"invoice_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV-20491"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contoso Supplies"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invoice_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">18450.0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.96</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"missing_purchase_order"</span><span class="p">,</span><span class="w"> </span><span class="s2">"above_auto_approval_limit"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="expected-llm-output">Expected LLM output</h3>
+<p>The model can now produce a useful business answer:</p>
+
+<blockquote>
+  <p>Invoice INV-20491 from Contoso Supplies was extracted with high confidence, but it exceeds the auto-approval limit and is missing a purchase order reference. Recommend manual review by finance operations before payment.</p>
+</blockquote>
+
+<h3 id="why-this-is-better">Why this is better</h3>
+<p>This is cost-effective because:</p>
+<ul>
+  <li>the LLM does not spend tokens on OCR-like work</li>
+  <li>the prompt is much smaller</li>
+  <li>the output is more consistent</li>
+  <li>the workflow is easier to govern</li>
+  <li>the business team gets a clearer answer faster</li>
+</ul>
+
+<h2 id="another-good-example-call-center-summarization">Another good example: call center summarization</h2>
+
+<p>A call center workflow often starts with audio, not text.</p>
+
+<p>A cost-effective flow is:</p>
+
+<p><strong>audio recording</strong> → <strong>Speech transcription</strong> → <strong>PII redaction</strong> → <strong>LLM summary</strong></p>
+
+<p>That means:</p>
+<ul>
+  <li>Speech handles transcription</li>
+  <li>Language handles sensitive data removal</li>
+  <li>the LLM summarizes the call, identifies intent, and proposes next steps</li>
+</ul>
+
+<p>That is far more efficient than sending raw audio and sensitive data into a general-purpose model.</p>
+
+<h2 id="what-to-route-where">What to route where</h2>
+
+<p>A simple decision rule works well in production:</p>
+
+<ul>
+  <li><strong>Documents and forms</strong> → Content Understanding</li>
+  <li><strong>Audio</strong> → Speech</li>
+  <li><strong>Translation</strong> → Translator</li>
+  <li><strong>Sensitive text</strong> → Language PII redaction</li>
+  <li><strong>Clinical text</strong> → Text Analytics for Health</li>
+  <li><strong>Reasoning and explanation</strong> → LLM</li>
+</ul>
+
+<p>This is not about avoiding LLMs.
+It is about using them where they add the most value.</p>
+
+<h2 id="what-teams-should-optimize-for">What teams should optimize for</h2>
+
+<p>The right success metric is not “how many LLM calls did we make?”
+The better metric is:</p>
+
+<blockquote>
+  <p><strong>How much did it cost to complete the business task end to end?</strong></p>
+</blockquote>
+
+<p>That usually includes:</p>
+<ul>
+  <li>token spend</li>
+  <li>latency</li>
+  <li>manual review cost</li>
+  <li>privacy risk</li>
+  <li>support overhead</li>
+  <li>developer complexity</li>
+</ul>
+
+<p>A hybrid Foundry + LLM design usually improves all of those.</p>
+
+<h2 id="microsoft-learn-references">Microsoft Learn references</h2>
+
+<ul>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview">Azure Content Understanding overview</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview">Azure Speech overview</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text">Speech to Text overview</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-translation">Speech translation overview</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/language-service/personally-identifiable-information/overview">PII detection in Azure AI Language</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/language-service/text-analytics-for-health/overview">Text Analytics for health</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/overview">Azure Translator document translation</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/overview">Azure Translator text translation</a></li>
+</ul>
+
+<h2 id="closing-thought">Closing thought</h2>
+
+<p>The most cost-effective AI systems are not the ones that use the largest model everywhere.
+They are the ones that use the <strong>right capability in the right layer</strong>.</p>
+
+<p>Azure AI Foundry gives you that separation:</p>
+<ul>
+  <li>Foundry services for the specialist tasks</li>
+  <li>an LLM for the reasoning tasks</li>
+  <li>governance for cost, privacy, and routing</li>
+</ul>
+
+<p>That is the pattern I would recommend for product teams that want to build practical AI, not just impressive demos.</p>
+
+  </article>
+
+  <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-subtle);">
+    <a href="/blog/" class="btn btn-outline">
+      <i class="fa-solid fa-arrow-left"></i> Back to Blog
+    </a>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AzureDevOpsPro</span>
+          <span class="logo-bracket"> /&gt;</span>
+          <p class="footer-tagline"># DevOps is culture, tools are outcome 🚀</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://youtube.com/@azuredevopspro" class="social-btn yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://linkedin.com/in/ashishrajsrivastava" class="social-btn li" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://t.me/azuredevopspro" class="social-btn tg" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://github.com/ashishrajsrivastava" class="social-btn gh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <p class="footer-copy">© 2026 Azure DevOps Pro &middot; <a href="mailto:contact@azuredevopspro.com">contact@azuredevopspro.com</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js?v=1791741034"></script>
+  </body>
+</html>
